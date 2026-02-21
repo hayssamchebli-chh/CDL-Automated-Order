@@ -6,6 +6,7 @@ import pandas as pd
 import streamlit as st
 from openpyxl import load_workbook
 from datetime import datetime
+import tempfile
 
 # =========================
 # LOAD STATIC ASSETS (Mode B)
@@ -356,6 +357,7 @@ if st.button("Generate Order", type="primary", disabled=not stock_file):
         st.error(str(e))
 
         st.exception(e)
+
 
 
 
