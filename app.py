@@ -325,7 +325,7 @@ if st.button("Generate Order", type="primary", disabled=not stock_file):
         st.dataframe(order_df, use_container_width=True)
 
         # Outputs
-        stamp = datetime.datetime.now().strftime("%Y-%m-%d_%H%M")strftime("%Y-%m-%d_%H%M")
+        stamp = datetime.datetime.now().strftime("%Y-%m-%d_%H%M")
         order_list_bytes = df_to_excel_bytes(order_df, sheet_name="Generated_Order")
 
         with st.spinner("Filling XLSM template (clearing + overwriting matrix)..."):
@@ -356,5 +356,6 @@ if st.button("Generate Order", type="primary", disabled=not stock_file):
         st.error(str(e))
 
         st.exception(e)
+
 
 
