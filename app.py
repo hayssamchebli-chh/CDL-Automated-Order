@@ -307,7 +307,7 @@ stock_file = st.file_uploader("Upload Stock Report", type=["xlsx", "xls"])
 sheet_name = st.text_input("Template sheet name", value="Main Pricing Template")
 st.caption("If your template uses another sheet name, change it here.")
 
-if st.button("Generate Order", type="primary", disabled=not (stock_file and min_file and template_file)):
+if st.button("Generate Order", type="primary", disabled=not stock_file):
     try:
         with st.spinner("Reading files..."):
             stock_bytes = stock_file.getvalue()
@@ -353,4 +353,5 @@ if st.button("Generate Order", type="primary", disabled=not (stock_file and min_
 
     except Exception as e:
         st.error(str(e))
+
         st.exception(e)
