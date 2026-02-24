@@ -352,7 +352,7 @@ if st.button("Generate Order", type="primary", disabled=not stock_file):
             st.download_button(
                 label="Download Order Template - FILLED.xlsm",
                 data=filled_xlsm_bytes,
-                file_name=f"Order_Template_FILLED_{stamp}.xlsm",
+                file_name=f"Q25-Costumer Sales Template BC-{stamp}.xlsm",
                 mime="application/vnd.ms-excel.sheet.macroEnabled.12"
             )
 
@@ -360,6 +360,7 @@ if st.button("Generate Order", type="primary", disabled=not stock_file):
         st.error(str(e))
 
         st.exception(e)
+
 
 
 
