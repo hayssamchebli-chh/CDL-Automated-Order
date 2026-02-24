@@ -43,7 +43,9 @@ MULTIPLE_10 = {
     "CDL-NYZ 2X0.5 RN", "CDL-NYZ 2X1", "CDL-NYZ 2X1 RN",
     "CDL-NYZ 2X1.5", "CDL-NYZ 2X1.5 RN",
     "CDL-NYZ 2X2", "CDL-NYZ 2X2 RN",
-    "CDL-NYZ 2X2.5"
+    "CDL-NYZ 2X2.5", 
+    "CDL-NYA 2 WT","CDL-NYA 2 WT",	"CDL-NYA 2 WT",	"CDL-NYA 2 WT",	"CDL-NYA 2 WT",	"CDL-NYA 2 WT",	
+    "CDL-NYA 2 WT",	"CDL-NYA 2 WT"
 }
 
 COLOR_HEADERS = ["B", "BE", "G", "J", "N", "R", "V", "VJ", "RN"]
@@ -357,6 +359,7 @@ if st.button("Generate Order", type="primary", disabled=not stock_file):
         st.error(str(e))
 
         st.exception(e)
+
 
 
 
